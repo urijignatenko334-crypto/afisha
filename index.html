@@ -2,39 +2,36 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Радио Мировые Хиты FM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Афиша Эфира</title>
     <style>
-        /* Убираем всё лишнее, делаем черный фон */
+        /* Убираем всё лишнее, чтобы фон был идеально черным */
         body, html { 
-            margin: 0; padding: 0; width: 100%; height: 100%; 
-            background-color: #000; overflow: hidden; 
-            display: flex; justify-content: center; align-items: center; 
+            margin: 0; 
+            padding: 0; 
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden; 
+            background-color: #000; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* Афиша как ссылка во весь экран */
-        .banner-link { 
-            display: block; width: 100%; height: 100vh; 
-            text-align: center; text-decoration: none; 
+        /* Настройки самой картинки */
+        img { 
+            max-width: 100%; 
+            max-height: 100vh; 
+            object-fit: contain; /* Картинка не растягивается, а вписывается */
+            display: block;
+            /* Добавим мягкое свечение, чтобы афиша «ожила» на черном фоне */
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.1); 
         }
-
-        /* Картинка сама подстраивается под экран, не растягиваясь уродливо */
-        .banner-link img { 
-            max-width: 100%; max-height: 100%; 
-            object-fit: contain; /* Сохраняет пропорции */
-            box-shadow: 0 0 30px rgba(255, 69, 0, 0.3); /* Легкое свечение */
-            transition: transform 0.3s ease;
-        }
-
-        /* Эффект нажатия для интерактивности */
-        .banner-link:active img { transform: scale(0.98); }
     </style>
 </head>
 <body>
 
-    <a href="https://vitaxa962.mpchat.com/" class="banner-link">
-        <img src="https://vmfile.com/upload/838/1415274579.jpg" alt="Афиша Эфира">
-    </a>
+    <img src="https://vmfile.com/upload/838/1415274579.jpg" alt="Рекламная Афиша">
 
 </body>
 </html>
